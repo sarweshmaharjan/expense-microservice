@@ -1,0 +1,62 @@
+version: "3.8"
+
+services:
+  hub:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hub
+    ports:
+      - "8000:8000"
+    networks:
+      - app_network
+    depends_on:
+      - expenses_divider
+      - json_builder
+      - report_generator
+
+  expenses_divider:
+    build:
+      context: ../expenses_divider
+      dockerfile: Dockerfile
+    ports:
+      - "8001:8001"
+    container_name: expenses_divider
+    networks:
+      - app_network
+
+  json_builder:
+    build:
+      context: ../json_builder
+      dockerfile: Dockerfile
+    ports:
+      - "8002:8002"
+    container_name: json_builder
+    networks:
+      - app_network
+
+  report_generator:
+    build:
+      context: ../report_generator
+      dockerfile: Dockerfile
+    ports:
+      - "8003:8003"
+    container_name: report_generator
+    networks:
+      - app_network
+
+  view:
+    build:
+      context: ../view
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    container_name: view
+    networks:
+      - app_network
+    depends_on:
+      - hub
+
+networks:
+  app_network:
+    driver: bridge

@@ -1,0 +1,37 @@
+---
+salary_currency: "NPR"
+current_salary: 60000.00
+cap_income_limit: 12000.00
+expenses:
+  - name: "Personal Expenses"
+    is_fixed: false
+    min: 500
+    max: 5000
+    type: "Liabilities"
+    active: false
+
+  - name: "Systemic Investment"
+    is_fixed: true
+    min: 0
+    max: 10000
+    type: "Investment"
+    active: true
+  
+  - name: "Insurance"
+    is_fixed: true
+    expected_amount: 6000
+    min: 4000
+    max: 6000
+    type: "Liabilities"
+    active: true
+  
+  - name: "Education"
+    is_fixed: false
+    is_range: false
+    expected_amount: 15800
+    min: 600
+    max: 16000
+    type: "Liabilities"
+    active: false
+---
+
