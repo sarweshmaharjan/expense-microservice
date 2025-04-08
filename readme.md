@@ -35,3 +35,8 @@ For detailed setup instructions, refer to the [Setup Guide](./SETUP.md).
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
+
+## Video
+
+https://github.com/user-attachments/assets/8b623c1a-9630-4475-8802-101ef1be5d36
+
