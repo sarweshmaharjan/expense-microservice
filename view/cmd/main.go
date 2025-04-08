@@ -12,23 +12,15 @@ func main() {
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Call Backend</title>
+	<title>Expenses Division</title>
 </head>
 <body>
-	<h1>Frontend (Port 3000)</h1>
-	<button id="callBtn">Call Backend</button>
+	<h1>Expenses Division</h1>
+	<button id="callBtn">View Expense Report</button>
 
 	<script>
-		document.getElementById("callBtn").addEventListener("click", async () => {
-			try {
-				const res = await fetch("http://hub:8000/", { method: "GET" });
-				if (!res.ok) throw new Error("Network response was not ok");
-
-				const data = await res.text();
-				alert("Response from backend: " + data);
-			} catch (err) {
-				alert("Error calling backend: " + err.message);
-			}
+		document.getElementById("callBtn").addEventListener("click", () => {
+			window.open("http://localhost:8000/", "_blank");
 		});
 	</script>
 </body>

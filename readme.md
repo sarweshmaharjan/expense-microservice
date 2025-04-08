@@ -27,6 +27,10 @@ To set up and run the microservice, follow the instructions below:
     make rebuild
     ```
 
+## Start Project 
+1. Go to URL: http://localhost:3000/
+2. Click on "View Expense Report"
+
 For detailed setup instructions, refer to the [Setup Guide](./SETUP.md).
 
 ## License
