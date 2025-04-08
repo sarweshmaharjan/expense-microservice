@@ -16,6 +16,7 @@ func main() {
 
 		res := services.Load()
 		w.Header().Set("Content-Type", "application/json")
+		w.Header().Set("Access-Control-Allow-Origin", "*")
 		jsonData, err := json.Marshal(res)
 		if err != nil {
 			http.Error(w, "Failed to encode response", http.StatusInternalServerError)
